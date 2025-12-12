@@ -15,7 +15,7 @@ function encryptInputFile(day) {
   let encrypted = cipher.update(file, "utf8", "hex");
   encrypted += cipher.final("hex");
   const result = iv.toString("hex") + ":" + encrypted;
-  fs.writeFileSync(baseTarget + "/day" + day + ".txt", result);
+  fs.writeFileSync(baseTarget + "/day" + day + ".bonbonn", result);
 }
 
 function getPw(){
@@ -24,7 +24,7 @@ function getPw(){
 }
 
 function decryptInputFile(day) {
-  const encrypted = fs.readFileSync(baseTarget + "day" + day + ".txt", {
+  const encrypted = fs.readFileSync(baseTarget + "day" + day + ".bonbonn", {
     encoding: "utf8",
   });
   const [ivHex, encryptedHex] = encrypted.split(":");
