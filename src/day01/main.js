@@ -1,5 +1,5 @@
-const { getInputFile} = require('../helper');
-
+const { getInputFile, encryptInputFile} = require('../helper');
+encryptInputFile(1)
 const lines = getInputFile(1).split("\n");
 
 const countZeros = (stepByStep) => {
