@@ -1,4 +1,4 @@
-const { encryptInputFile, getInputFile} = require('../helper');
+const { getInputFile} = require('../helper');
 
 const lines = getInputFile(1).split("\n");
 
@@ -32,8 +32,9 @@ const countZeros = (stepByStep) => {
     }
     return z
   }
-  
-  console.log(countZeros(false));
-  console.log(countZeros(true));
+
+
+  console.log(countZeros(true))
+  console.log(countZeros(false))
   console.log(countZerosGolfed(lines, true))
   console.log(countZerosGolfed(lines, false))
